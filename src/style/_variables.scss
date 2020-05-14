@@ -1,0 +1,24 @@
+// primary
+
+$primary:#9e7f66;
+$secondary:#111111;
+
+
+//secondary
+
+$dark: #17192b;
+$mid:#242b37;
+$light: #5c6779;
+
+/// spacing
+
+$elementSpace: 30px;
+$sectionGap: calc(#{$elementSpace} * 3);
+$gutter: 30px;
+
+
+
+:export {
+    dark: $dark;
+    light: $light;
+  }

@@ -1,0 +1,33 @@
+@import '../../style/_variables.scss';
+
+button{
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;    
+}
+
+button.dark{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    &:hover{
+        background: white;
+        color: $dark;
+        border: 1px solid $dark;
+    }
+}
+
+button.light{
+    background: transparent;
+    color: $secondary;
+    border: 1px solid $secondary;
+  
+    &:hover{
+        background: $secondary;
+        color: white;
+        border: 1px solid $dark;
+    }
+}

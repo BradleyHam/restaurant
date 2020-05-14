@@ -1,0 +1,29 @@
+@import '../../style/_variables.scss';
+
+$lineWidth: 80px;
+.circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    border: 2px solid $primary;
+    position: relative;
+    transform: translateX(-$lineWidth / 2);
+    opacity: .7;
+    margin: $elementSpace;
+
+    &:after{
+        content: '';
+        width: $lineWidth;
+        position: absolute;
+        height: 2px;
+        display: block;
+        background: $primary;
+        top: 50%;
+        left: 15px;
+        -webkit-transform: translateY(-50%);
+        -moz-transform:  translateY(-50%);
+        -o-transform:  translateY(-50%);
+        transform:  translateY(-50%);
+       
+    }
+}

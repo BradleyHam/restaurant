@@ -1,0 +1,10 @@
+@import '../../style/_variables.scss';
+.Footer{
+    background: $secondary;
+    padding: $sectionGap $gutter;
+    color: white;
+    text-align:center;
+    .details, .times{
+       margin: $elementSpace 0;
+    }
+}

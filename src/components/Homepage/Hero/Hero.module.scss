@@ -1,0 +1,22 @@
+@import '../../../style/_variables.scss';
+.Hero{
+    height: 90vh;
+    background: center/cover no-repeat url('../../../images/homepage/hero-bg-mobile@2x.jpg');
+    color: white;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    
+    p{
+        padding-bottom: $elementSpace;
+    }
+    
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 25px;
+}

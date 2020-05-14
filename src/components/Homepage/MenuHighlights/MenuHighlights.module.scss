@@ -1,0 +1,38 @@
+@import '../../../style/_variables.scss';
+
+.MenuHighlights{
+    background: $secondary;
+    color: white;
+    text-align: center;
+    padding: $sectionGap $gutter;
+  
+}
+.contentOne{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.contentImg{
+    height: 40vh;
+    width: 100%;
+    margin: $elementSpace 0;
+}
+.contentImgFirst{
+    background: center / cover no-repeat url('../../../images/homepage/salmon-mobile@2x.jpg');
+}
+.contentImgSecond{
+    background: center / cover no-repeat url('../../../images/homepage/beef-mobile@2x.jpg');
+  
+}
+.contentImgThird{
+    background: center / cover no-repeat url('../../../images/homepage/chocolate-mobile@2x.jpg');
+}
+
+.contentTwo,.contentThree{
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    
+}
+.contentTwo,.contentThree, .contentFour{
+    padding-bottom: $elementSpace;
+}

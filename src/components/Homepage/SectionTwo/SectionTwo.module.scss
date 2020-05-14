@@ -1,0 +1,24 @@
+@import '../../../style/_variables.scss';
+.SectionTwo{
+     padding: 0 $gutter;
+     margin-top: -80px;
+     text-align:center;
+}
+.contentOne,.contentTwo{
+     display:flex;
+     flex-flow: column;
+     align-items: center;
+     margin-bottom: $sectionGap;
+
+}
+
+.firstImage{
+    height: 60vh;
+    width: 100%;
+    background: center / cover no-repeat url('../../../images/homepage/enjoyable-place-mobile@2x.jpg');
+}
+.secondImage{
+    height: 60vh;
+    width: 100%;
+    background: center / cover no-repeat url('../../../images/homepage/locally-sourced-mobile@2x.jpg');
+}

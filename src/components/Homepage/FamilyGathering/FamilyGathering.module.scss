@@ -1,0 +1,42 @@
+@import '../../../style/_variables.scss';
+.FamilyGathering{
+    padding: $sectionGap $gutter;
+    text-align: center;
+    h3{
+        padding: 10px;
+        opacity: .2;
+        
+    }
+    h3.active{
+        opacity: 1;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 20%;
+            height: 2px;
+            background: $primary;
+            bottom: 3px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform:  translateX(-50%);
+            -o-transform:  translateX(-50%);
+            transform:  translateX(-50%);
+        }
+    }
+    p{
+        padding-bottom: $elementSpace;
+    }
+}
+
+
+.gatheringImg{
+    box-shadow: 0 20px 20px rgba(0,0,0,.2);
+    height: 60vh;
+    background: center / cover no-repeat url('../../../images/homepage/family-gathering-mobile@2x.jpg')
+}
+
+.gatherings{
+    padding: 20px 0;
+}
