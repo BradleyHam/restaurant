@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 // primary
 
 $primary:#9e7f66;
@@ -12,10 +14,14 @@ $light: #5c6779;
 
 /// spacing
 
+
 $elementSpace: 30px;
 $sectionGap: calc(#{$elementSpace} * 3);
 $gutter: 30px;
 
+$desktopGutter: 80px;
+
+$imgShadow: 0 30px 50px rgba(0,0,0,.2);
 
 
 :export {

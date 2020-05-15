@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;600;700&display=swap');
-@import './_variables.scss';
+@import './variables.scss';
 
+body{
+    font-family: "Spartan"
+}
 h1{
     font-size: 50px;
     line-height: 62px;
@@ -22,7 +25,7 @@ h3{
     line-height: 28px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: .8px;
+    letter-spacing: 1px;
    
 
 }
@@ -35,17 +38,8 @@ h1,h2,h3, body, button{
     font-family: "Spartan";
 }
 
-body:not(.bodySecondary){
-    font-size: 18px;
-    line-height: 30px;
-    @media(max-width: 750px){
-        font-size: 16px; 
-        
-    }
-}
-
-.bodySecondary{
-    font-size: 15px;
-    line-height: 28px;
+p{
+    font-size: 14px;
+    line-height: 1.5;
 }
 

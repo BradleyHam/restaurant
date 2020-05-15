@@ -1,22 +1,49 @@
-@import '../../../style/_variables.scss';
+@import '../../../style/variables.scss';
+@import '../../../style/breakpoints.scss';
+
 .Hero{
-    height: 90vh;
+    height: 120vh;
     background: center/cover no-repeat url('../../../images/homepage/hero-bg-mobile@2x.jpg');
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: $gutter;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    
     p{
         padding-bottom: $elementSpace;
     }
-    
+    @include media('>450px'){
+        height: 100vh;
+        background: center/cover no-repeat url('../../../images/homepage/hero-bg-tablet@2x.jpg');
+    }
+    @include media('>=tablet'){
+        background: center/cover no-repeat url('../../../images/homepage/hero-bg-desktop@2x.jpg');
+        text-align: left;
+        align-items: flex-start;
+        padding: $desktopGutter;
+    }
+    @include media('>=desktop'){
+       
+    }
 }
 
 .logo{
     font-weight: bold;
     font-size: 25px;
+}
+
+.content{
+    transform: translateY(50px);
+
+
+    @include media('>=tablet'){
+        transform: translateY(0);
+        width: 50%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        height: 100%;
+    }
 }

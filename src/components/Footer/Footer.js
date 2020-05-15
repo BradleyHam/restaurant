@@ -4,7 +4,8 @@ import classes from './Footer.module.scss'
 const Footer = () => {
     return (
         <div className={classes.Footer}>
-            <h3>Logo</h3>
+            <h3 className={classes.logo}>Logo</h3>
+
             <div className={classes.details}>
                 <p>Marthwaite, Sedbergh</p>
                 <p>Cumbria</p>

@@ -1,29 +1,82 @@
-@import '../../../style/_variables.scss';
+@import '../../../style/variables.scss';
+@import '../../../style/breakpoints.scss';
 
 .MenuHighlights{
     background: $secondary;
     color: white;
     text-align: center;
     padding: $sectionGap $gutter;
-  
+    position: relative;
+    z-index: 5;
+    @include media('>phone'){
+        padding: $sectionGap $desktopGutter;
+    }
+    @include media('>tablet'){
+       display: flex;
+    }  
 }
-.contentOne{
+.TitleSection{
     display: flex;
     align-items: center;
     flex-flow: column;
+    padding-right: 30px;
+
+    h2{
+        @include media('>tablet'){
+           font-size: 30px;
+           line-height: 1.4;
+            }
+    }
+
+    @include media('>700px'){
+       width: 70%;
+       margin: $elementSpace auto;
+     }
+    @include media('>tablet'){
+     flex: 2;
+     align-items: flex-start;
+     text-align: left;
+     }
 }
+
+.HighlightsSection{
+    @include media('>tablet'){
+        flex: 4;
+        }
+}
+
 
 .contentImg{
     height: 40vh;
     width: 100%;
     margin: $elementSpace 0;
+    @include media('>700px'){
+        flex: 2;
+        margin: 0;
+        align-self: stretch;
+        height: initial;
+        
+     }
+}
+
+.text{
+    @include media('>700px'){
+        flex: 4;
+        text-align: left;
+        margin-left: 40px;
+        h2{
+            font-size: 20px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+
+        }
+     }
 }
 .contentImgFirst{
     background: center / cover no-repeat url('../../../images/homepage/salmon-mobile@2x.jpg');
 }
 .contentImgSecond{
     background: center / cover no-repeat url('../../../images/homepage/beef-mobile@2x.jpg');
-  
 }
 .contentImgThird{
     background: center / cover no-repeat url('../../../images/homepage/chocolate-mobile@2x.jpg');
@@ -33,6 +86,11 @@
     border-bottom: 1px solid rgba(255,255,255,.2);
     
 }
+
 .contentTwo,.contentThree, .contentFour{
     padding-bottom: $elementSpace;
-}
+    @include media('>700px'){
+       display: flex;
+       padding:  $elementSpace;
+       align-items: center;
+}}

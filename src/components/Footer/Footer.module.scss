@@ -1,10 +1,24 @@
-@import '../../style/_variables.scss';
+@import '../../style/variables.scss';
 .Footer{
     background: $secondary;
     padding: $sectionGap $gutter;
     color: white;
     text-align:center;
-    .details, .times{
-       margin: $elementSpace 0;
+    @include media('>phone'){
+        padding: $sectionGap $desktopGutter;
+    }
+    @include media('>tablet'){
+        display: flex;
+    }
+}
+
+.details, .times{
+    margin: $elementSpace 0;
+ }
+
+.details, .times, .logo{
+    @include media('>tablet'){
+        flex: 1;
+        text-align: left;
     }
 }

@@ -1,24 +1,124 @@
-@import '../../../style/_variables.scss';
+@import '../../../style/variables.scss';
+@import '../../../style/breakpoints.scss';
+
 .SectionTwo{
      padding: 0 $gutter;
      margin-top: -80px;
      text-align:center;
+     position: relative;
+     @include media('>=phone'){
+        padding: 0 $desktopGutter; 
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: $light;
+            height: 380px;
+            width: 70%;
+            opacity: .1;
+            transform: translateY(200px);
+            z-index: -1;
+            border-radius: 50px 0 0 0;
+        }
+
+    }
 }
 .contentOne,.contentTwo{
-     display:flex;
+     display:flex; 
      flex-flow: column;
      align-items: center;
      margin-bottom: $sectionGap;
-
+     @include media('>=tablet'){
+        flex-flow: row;
+    }
+}
+.contentOne{
+    @include media('>=tablet'){
+        margin-bottom: 0;
+    }
 }
 
 .firstImage{
     height: 60vh;
     width: 100%;
     background: center / cover no-repeat url('../../../images/homepage/enjoyable-place-mobile@2x.jpg');
+    position: relative;
+    box-shadow: $imgShadow;
+    @include media('>=phone'){
+        background: center / cover no-repeat url('../../../images/homepage/enjoyable-place-tablet@2x.jpg');
+        height: 40vh;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 250px;
+            width: 500px;
+            left:-200px;
+            bottom: -100px;
+            background: $light;
+            z-index: -1;
+            opacity: .1;
+        }
+    }
+
+    @include media('>=tablet'){
+        align-self: flex-start;
+        height: 60vh;
+        width: 100%;
+        background: center / cover no-repeat url('../../../images/homepage/enjoyable-place-desktop@2x.jpg');
+        &::after{
+            height: 250px;
+            width: 180%;
+            left:-200px;
+            bottom: 40px;
+        }
+    }
 }
+
 .secondImage{
+    position: relative;
     height: 60vh;
     width: 100%;
+    box-shadow: $imgShadow;
     background: center / cover no-repeat url('../../../images/homepage/locally-sourced-mobile@2x.jpg');
+    @include media('>=phone'){
+        background: center / cover no-repeat url('../../../images/homepage/locally-sourced-tablet@2x.jpg');
+        height: 40vh;
+        &::after{
+            content: url('../../../images/patterns/pattern-lines.svg');
+            position: absolute;
+            bottom:40px;
+            right: -50px;
+        }
+    }
+    @include media('>=tablet'){
+        align-self: flex-start;
+        height: 65vh;
+        width: 100%;
+        background: center / cover no-repeat url('../../../images/homepage/locally-sourced-desktop@2x.jpg');
+        transform: translateY(100px);
+        z-index: 3000;
+    }
+}
+
+.textOne{
+    @include media('>=tablet'){
+        text-align:left;
+        padding: 50px;
+}
+}
+.textTwo{
+    @include media('>=tablet'){
+        order: -1;
+        padding-right: 50px;
+        text-align:left;
+}
+}
+
+.textOne, .textTwo{
+    @include media('<tablet'){
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 }

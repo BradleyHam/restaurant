@@ -1,5 +1,4 @@
 import React from 'react';
-import vars from '../../style/_variables.scss';
 import './Button.scss';
 
 const Button = (props) => {
