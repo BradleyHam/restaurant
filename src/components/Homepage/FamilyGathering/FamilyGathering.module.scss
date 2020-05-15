@@ -12,10 +12,12 @@
     h3{
         padding: 10px;
         opacity: .2;
+        cursor: pointer;
     }
     h3.active{
         opacity: 1;
         position: relative;
+        transform: translateX(10px);
         &::after{
             position: absolute;
             content: '';
@@ -48,59 +50,58 @@
 }
 
 
-/// img //////////////
+/// IMAGES  //////////////
 
 .gatheringImgContainer{
     height: 60vh;
     box-shadow: $imgShadow;
     position: relative;
+    overflow: hidden;
     @include media('>tablet'){
         flex: 1;
      
     }
 }
 
-.gatheringImg{
-    background: center / cover no-repeat url('../../../images/homepage/family-gathering-mobile@2x.jpg');
+.gatheringImg,.specialImg, .socialImg{
    z-index: 100;
     height: 100%;
-    position: relative;
-}
-
-.blueBackground{
-    @include media('>phone'){
-        transform: scale(.8);
-
-        &::before{
-           content: '';
-           height: 400px;
-           width: 800px;
-           background: $light;
-           opacity: .1;
-           position: absolute;
-           top:-200px;
-           left: -400px;
-           display: block; 
-           border-radius: 0 150px 150px 0;
-        
-        }
-      
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    right:0;
+    opacity: 0;
+    &.active{
+        opacity: 1;
     }
 }
+
+.gatheringImg{
+    background: center / cover no-repeat url('../../../images/homepage/family-gathering-mobile@2x.jpg');
+}
+.specialImg{
+    background: center / cover no-repeat url('../../../images/homepage/special-events-desktop@2x.jpg');
+
+}
+.socialImg{
+    background: center / cover no-repeat url('../../../images/homepage/social-events-desktop@2x.jpg');
+
+}
+
+
+
+.blueBackground{
+  
+}
 .pattern{
-      &::after{
-            content: url('../../../images/patterns/pattern-lines.svg');
-            position: absolute;
-            top: -40px;
-            left: -60px;
-            z-index: 3000;
-        }
+  
 }
 
 ////// img //////////
 
 
-
+//////// TEXT //////////
 
 .gatheringText{
     display: flex;
@@ -139,3 +140,35 @@
     }
     }
 }
+
+//////// TEXT //////////
+
+
+//////// DESCTIPTION CONTAINER //////////
+
+.desctiptionContainer{
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    width: 100%;
+}
+
+.gatheringDesctiption,.specialDescription,.socialDescription{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+.gatheringDesctiption.active,
+.specialDescription.active,
+.socialDescription.active{
+    opacity: 1;
+}
+
+
+
+
+
+//////// DESCTIPTION CONTAINER //////////
