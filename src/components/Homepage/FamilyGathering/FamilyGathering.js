@@ -31,8 +31,8 @@ const FamilyGathering = () => {
 
         function animateText(type) {
             let tl = gsap.timeline({ defualts: { duration: 1, ease: 'back' } });
-            tl.to([familyGatheringText, specialEventsText, socialEventsText], { opacity: 0 });
-            tl.to(type, { opacity: 1 });
+            tl.to([familyGatheringText, specialEventsText, socialEventsText], { opacity: 0, x: 100 });
+            tl.to(type, { opacity: 1, x: 0, stagger: 0.6 });
         }
 
         if (type === familyGathering) {
