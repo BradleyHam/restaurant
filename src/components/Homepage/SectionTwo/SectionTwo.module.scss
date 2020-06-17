@@ -45,6 +45,7 @@
     background: center / cover no-repeat url('../../../images/homepage/enjoyable-place-mobile@2x.jpg');
     position: relative;
     box-shadow: $imgShadow;
+    transform: translateX(-200px);
     @include media('>=phone'){
         background: center / cover no-repeat url('../../../images/homepage/enjoyable-place-tablet@2x.jpg');
         height: 40vh;
@@ -80,7 +81,9 @@
     height: 60vh;
     width: 100%;
     box-shadow: $imgShadow;
+   
     background: center / cover no-repeat url('../../../images/homepage/locally-sourced-mobile@2x.jpg');
+    transform: translateX(-200px);
     @include media('>=phone'){
         background: center / cover no-repeat url('../../../images/homepage/locally-sourced-tablet@2x.jpg');
         height: 40vh;
@@ -96,9 +99,13 @@
         height: 65vh;
         width: 100%;
         background: center / cover no-repeat url('../../../images/homepage/locally-sourced-desktop@2x.jpg');
-        transform: translateY(100px);
+        transform: translate(200px, 120px);
         z-index: 3000;
     }
+}
+
+.firstImage,.secondImage{
+    opacity: 0;
 }
 
 .textOne{

@@ -59,7 +59,6 @@
     overflow: hidden;
     @include media('>tablet'){
         flex: 1;
-     
     }
 }
 
@@ -82,26 +81,11 @@
 }
 .specialImg{
     background: center / cover no-repeat url('../../../images/homepage/special-events-desktop@2x.jpg');
-
 }
 .socialImg{
     background: center / cover no-repeat url('../../../images/homepage/social-events-desktop@2x.jpg');
-
 }
 
-
-
-.blueBackground{
-  
-}
-.pattern{
-  
-}
-
-////// img //////////
-
-
-//////// TEXT //////////
 
 .gatheringText{
     display: flex;
@@ -120,6 +104,14 @@
     padding: $sectionGap 0;
     h3{
         padding: 14px 0;
+    }
+    @include media('<400px'){
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      h3{
+          font-size: 12px;
+      }
     }
     @include media('>phone'){
         display: flex;
@@ -147,10 +139,14 @@
 //////// DESCTIPTION CONTAINER //////////
 
 .desctiptionContainer{
+    @include media('<400px'){
+      margin-bottom: 40px;
+      }
     position: relative;
     overflow: hidden;
     min-height: 200px;
     width: 100%;
+    
 }
 
 .gatheringDesctiption,.specialDescription,.socialDescription{
